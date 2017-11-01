@@ -13,7 +13,7 @@ nav ul li, footer ul li {
     margin-right: 20px;
 }
 
-ul li {font-size: 40px}
+ul li {font-size: 1.5em}
 
 a {
     text-decoration: none;
@@ -47,5 +47,6 @@ ul.posts {
 
 ul.posts li {
     list-style: none;
+    font-size: 1.5em;
 }
 
