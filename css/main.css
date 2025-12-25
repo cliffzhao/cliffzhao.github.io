@@ -1,19 +1,19 @@
 :root {
-    --primary-color: #334155; /* Slate 700 - Softer dark gray */
-    --accent-color: #0d9488; /* Teal 600 - Elegant, professional teal */
-    --text-color: #475569; /* Slate 600 */
+    --primary-color: #1e1b4b; /* Indigo 950 - Deep, authoritative academic blue */
+    --accent-color: #4f46e5; /* Indigo 600 - Vibrant but professional */
+    --text-color: #374151; /* Gray 700 - High contrast text */
     --bg-color: #ffffff;
-    --light-bg: #f0fdfa; /* Very light teal tint for hovers */
-    --border-color: #cbd5e1; /* Slate 300 */
-    --gradient-start: #0d9488;
-    --gradient-end: #99f6e4; /* Teal 200 */
+    --light-bg: #eef2ff; /* Indigo 50 - Very subtle tint */
+    --border-color: #e0e7ff; /* Indigo 100 */
+    --gradient-start: #4f46e5;
+    --gradient-end: #a5b4fc; /* Indigo 300 */
 }
 
 body {
     font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
     color: var(--text-color);
     background-color: var(--bg-color);
-    line-height: 1.7; /* Slightly increased for readability */
+    line-height: 1.6; /* Slightly tighter for academic density */
     margin: 0;
     padding: 0;
 }
@@ -41,10 +41,12 @@ h1 {
 h2 {
     font-size: 1.8em;
     position: relative;
-    padding-bottom: 10px;
-    margin-top: 2em;
-    border-bottom: 2px solid var(--border-color); /* Fallback */
-    border-image: linear-gradient(to right, var(--gradient-start), var(--gradient-end), transparent) 1; /* Smoother gradient */
+    padding-bottom: 8px;
+    margin-top: 1.5em; /* Reduced margin for compactness */
+    border-bottom: 2px solid var(--border-color);
+    border-image: linear-gradient(to right, var(--gradient-start), var(--gradient-end), transparent) 1;
+    display: block;
+    width: 100%;
 }
 
 p {
@@ -118,26 +120,26 @@ footer ul li {
 
 /* Publications List Styling */
 ul {
-    padding-left: 10px;
-    list-style-type: none; /* Cleaner look */
+    padding-left: 0; /* Remove default padding for control */
+    list-style-type: none;
 }
 
 li {
-    margin-bottom: 12px;
-    padding: 10px 15px;
-    border-radius: 8px;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    margin-bottom: 8px; /* Tighter spacing */
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.15s ease;
 }
 
 li:hover {
     background-color: var(--light-bg);
 }
 
-/* Add bullets back manually if needed, or stick to clean blocks */
-/* For publications, hanging indent often looks better */
+/* Hanging Indent for Academic Style */
 ul li {
-    padding-left: 20px;
-    position: relative;
+    padding-left: 24px; /* Space for bullet */
+    text-indent: -24px; /* Hanging indent */
+    margin-left: 0;
 }
 
 ul li::before {
@@ -145,8 +147,9 @@ ul li::before {
     color: var(--accent-color);
     font-weight: bold;
     display: inline-block; 
-    width: 1em;
-    margin-left: -1em;
+    width: 24px; /* Match indentation */
+    text-align: center;
+    text-indent: 0; /* Reset indent for bullet */
 }
 
 /* Utility */
