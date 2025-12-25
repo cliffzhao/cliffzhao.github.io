@@ -1,17 +1,17 @@
 :root {
-    --primary-color: #2c3e50;
-    --accent-color: #3498db;
-    --text-color: #333;
-    --bg-color: #fff;
-    --light-gray: #f8f9fa;
-    --border-color: #e9ecef;
+    --primary-color: #1e293b; /* Slate 800 */
+    --accent-color: #2563eb; /* Royal Blue */
+    --text-color: #334155; /* Slate 700 */
+    --bg-color: #ffffff;
+    --light-bg: #f1f5f9; /* Slate 100 */
+    --border-color: #e2e8f0; /* Slate 200 */
 }
 
 body {
     font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
     color: var(--text-color);
     background-color: var(--bg-color);
-    line-height: 1.6;
+    line-height: 1.7; /* Slightly increased for readability */
     margin: 0;
     padding: 0;
 }
@@ -19,36 +19,36 @@ body {
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 20px; /* Increased top/bottom padding */
 }
 
 /* Typography */
 h1, h2, h3 {
     color: var(--primary-color);
     margin-top: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.8em;
     font-weight: 700;
 }
 
 h1 {
     font-size: 2.5em;
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: 10px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--accent-color); /* Keep solid for main title */
 }
 
 h2 {
     font-size: 1.8em;
     position: relative;
     padding-bottom: 10px;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-    font-weight: 700;
-    border-bottom: 3px solid var(--accent-color);
+    margin-top: 2em;
+    border-bottom: 2px solid var(--border-color); /* Fallback */
+    border-image: linear-gradient(to right, var(--accent-color), transparent) 1; /* Modern Gradient */
 }
 
 p {
     font-size: 1.1em;
     margin-bottom: 1.2em;
+    color: var(--text-color);
 }
 
 /* Links */
@@ -114,13 +114,37 @@ footer ul li {
     margin: 0 10px;
 }
 
-/* Publications List */
+/* Publications List Styling */
 ul {
-    padding-left: 20px;
+    padding-left: 10px;
+    list-style-type: none; /* Cleaner look */
 }
 
 li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+li:hover {
+    background-color: var(--light-bg);
+}
+
+/* Add bullets back manually if needed, or stick to clean blocks */
+/* For publications, hanging indent often looks better */
+ul li {
+    padding-left: 20px;
+    position: relative;
+}
+
+ul li::before {
+    content: "•";
+    color: var(--accent-color);
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
 }
 
 /* Utility */
