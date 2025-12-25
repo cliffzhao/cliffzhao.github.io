@@ -1,12 +1,12 @@
 :root {
-    --primary-color: #1e1b4b; /* Indigo 950 - Deep, authoritative academic blue */
-    --accent-color: #4f46e5; /* Indigo 600 - Vibrant but professional */
-    --text-color: #374151; /* Gray 700 - High contrast text */
+    --primary-color: #0f172a; /* Slate 900 - Deepest navy/black for authority */
+    --accent-color: #2563eb; /* Royal Blue 600 - Classic academic link color */
+    --text-color: #334155; /* Slate 700 - Highly readable dark gray */
     --bg-color: #ffffff;
-    --light-bg: #eef2ff; /* Indigo 50 - Very subtle tint */
-    --border-color: #e0e7ff; /* Indigo 100 */
-    --gradient-start: #4f46e5;
-    --gradient-end: #a5b4fc; /* Indigo 300 */
+    --light-bg: #f8fafc; /* Slate 50 - Very neutral hover background */
+    --border-color: #cbd5e1; /* Slate 300 - Neutral border */
+    --gradient-start: #2563eb; /* Royal Blue */
+    --gradient-end: #60a5fa; /* Lighter Blue */
 }
 
 body {
@@ -35,7 +35,7 @@ h1, h2, h3 {
 h1 {
     font-size: 2.5em;
     padding-bottom: 15px;
-    border-bottom: 3px solid var(--accent-color); /* Keep solid for main title */
+    border-bottom: 2px solid var(--border-color); /* Reverted to neutral gray line */
 }
 
 h2 {
