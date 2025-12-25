@@ -164,7 +164,7 @@ ul li::before {
 @media screen and (min-width: 768px) {
     .profile-grid {
         display: grid;
-        grid-template-columns: 4fr 6fr; /* 40% sidebar, 60% content */
+        grid-template-columns: 3fr 7fr; /* 30% sidebar, 70% content */
         gap: 60px;
         align-items: start; /* Ensure top alignment */
     }
