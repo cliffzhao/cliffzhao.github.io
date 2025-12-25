@@ -40,6 +40,8 @@ h2 {
     font-size: 1.8em;
     position: relative;
     padding-bottom: 10px;
+    display: block;
+    width: 100%;
 }
 
 h2:after {
@@ -126,7 +128,7 @@ ul {
 }
 
 li {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 /* Utility */
