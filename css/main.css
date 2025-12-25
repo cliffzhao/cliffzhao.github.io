@@ -240,6 +240,7 @@ ul li::before {
 /* Profile Bio (Right Side) */
 .profile-bio h2 {
     margin-top: 0; /* Align with top of sidebar */
+    padding-top: 0; /* Ensure no internal padding pushes it down */
 }
 
 /* Utility */
