@@ -1,10 +1,12 @@
 :root {
-    --primary-color: #1e293b; /* Slate 800 */
-    --accent-color: #2563eb; /* Royal Blue */
-    --text-color: #334155; /* Slate 700 */
+    --primary-color: #334155; /* Slate 700 - Softer dark gray */
+    --accent-color: #0d9488; /* Teal 600 - Elegant, professional teal */
+    --text-color: #475569; /* Slate 600 */
     --bg-color: #ffffff;
-    --light-bg: #f1f5f9; /* Slate 100 */
-    --border-color: #e2e8f0; /* Slate 200 */
+    --light-bg: #f0fdfa; /* Very light teal tint for hovers */
+    --border-color: #cbd5e1; /* Slate 300 */
+    --gradient-start: #0d9488;
+    --gradient-end: #99f6e4; /* Teal 200 */
 }
 
 body {
@@ -42,7 +44,7 @@ h2 {
     padding-bottom: 10px;
     margin-top: 2em;
     border-bottom: 2px solid var(--border-color); /* Fallback */
-    border-image: linear-gradient(to right, var(--accent-color), transparent) 1; /* Modern Gradient */
+    border-image: linear-gradient(to right, var(--gradient-start), var(--gradient-end), transparent) 1; /* Smoother gradient */
 }
 
 p {
