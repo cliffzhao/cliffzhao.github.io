@@ -165,7 +165,7 @@ ul li::before {
     .profile-grid {
         display: grid;
         grid-template-columns: 2.9fr 7.1fr; /* 29% sidebar, 71% content */
-        gap: 60px;
+        gap: 40px; /* Reduced gap from 60px to 40px */
         align-items: start; /* Ensure top alignment */
     }
 }
