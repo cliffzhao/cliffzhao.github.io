@@ -152,17 +152,107 @@ ul li::before {
     text-indent: 0; /* Reset indent for bullet */
 }
 
+/* Profile Grid Layout */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .profile-grid {
+        grid-template-columns: 250px 1fr; /* Sidebar width + Content */
+        gap: 50px;
+    }
+}
+
+/* Profile Sidebar (No Photo) */
+.profile-sidebar {
+    text-align: left; /* Align left for cleaner look without photo */
+    border-right: 1px solid var(--border-color); /* Separator line */
+    padding-right: 20px;
+}
+
+@media (max-width: 767px) {
+    .profile-sidebar {
+        text-align: center;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+}
+
+.profile-sidebar h1 {
+    font-size: 1.8em;
+    border-bottom: none; /* Remove underline for sidebar name */
+    padding-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.profile-info p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.contact-info {
+    margin-top: 25px;
+}
+
+.contact-info h3 {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    border-bottom: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--accent-color);
+}
+
+.contact-info p {
+    font-size: 0.95em;
+    word-break: break-all;
+    line-height: 1.4;
+}
+
+/* Social Icons Sidebar */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons i {
+    margin-right: 15px; /* Spacing for left alignment */
+    margin-left: 0;
+    color: var(--primary-color);
+    transition: color 0.2s;
+}
+
+@media (max-width: 767px) {
+    .social-icons i {
+        margin: 0 10px; /* Center alignment for mobile */
+    }
+}
+
+/* Profile Bio (Right Side) */
+.profile-bio h2 {
+    margin-top: 0; /* Align with top of sidebar */
+}
+
 /* Utility */
 .blurb {
     margin-bottom: 2rem;
 }
 
 .social-icons {
-    margin-top: 1rem;
+    margin-top: 15px;
 }
 
 .social-icons i {
-    margin-right: 15px;
+    margin: 0 8px;
     color: var(--primary-color);
     transition: color 0.2s;
 }
