@@ -67,6 +67,13 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Accessible keyboard focus */
+a:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+    border-radius: 3px;
+}
+
 /* Navigation */
 nav {
     background-color: var(--light-gray);
@@ -133,6 +140,11 @@ li {
 
 li:hover {
     background-color: var(--light-bg);
+}
+
+/* Lists opted out of hover feedback (e.g. Experience, Teaching) */
+.no-hover li:hover {
+    background-color: transparent;
 }
 
 /* Hanging Indent for Academic Style */
@@ -218,7 +230,7 @@ ul li::before {
 
 .contact-info p {
     font-size: 0.95em;
-    word-break: break-all;
+    overflow-wrap: anywhere;
     line-height: 1.4;
 }
 
