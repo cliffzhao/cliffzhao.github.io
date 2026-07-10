@@ -67,6 +67,13 @@
 				window.addEventListener('scroll', function () {
 					if (!ticking) { ticking = true; requestAnimationFrame(update); }
 				}, { passive: true });
+				// First nav item (About) jumps to the very top of the page.
+				if (sections.length) {
+					sections[0].link.addEventListener('click', function (e) {
+						e.preventDefault();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+					});
+				}
 				update();
 			})();
 			</script>
