@@ -22,6 +22,18 @@
 
 		</head>
 		<body>
+			<nav class="site-nav">
+				<div class="nav-inner">
+					<ul class="nav-links">
+						<li><a href="#about">About</a></li>
+						<li><a href="#experience">Experience</a></li>
+						<li><a href="#teaching">Teaching</a></li>
+						<li><a href="#dissertation">Dissertation</a></li>
+						<li><a href="#publications">Publications</a></li>
+						<li><a href="#service">Service</a></li>
+					</ul>
+				</div>
+			</nav>
 			<div class="container">
 			
 			{{ content }}
@@ -32,5 +44,31 @@
 	        		<li><a href="https://github.com/cliffzhao">github.com/cliffzhao</a></li>
 				</ul>
 			</footer>
+			<script>
+			// Scrollspy: highlight the nav link of the section currently at the top.
+			(function () {
+				var links = Array.prototype.slice.call(document.querySelectorAll('.site-nav .nav-links a'));
+				var sections = [];
+				links.forEach(function (a) {
+					var sec = document.getElementById(a.getAttribute('href').slice(1));
+					if (sec) sections.push({ link: a, sec: sec });
+				});
+				var offset = 90; // nav height + a little breathing room
+				var ticking = false;
+				function update() {
+					ticking = false;
+					var current = sections[0];
+					sections.forEach(function (s) {
+						if (s.sec.getBoundingClientRect().top - offset <= 0) current = s;
+					});
+					links.forEach(function (a) { a.classList.remove('active'); });
+					if (current) current.link.classList.add('active');
+				}
+				window.addEventListener('scroll', function () {
+					if (!ticking) { ticking = true; requestAnimationFrame(update); }
+				}, { passive: true });
+				update();
+			})();
+			</script>
 		</body>
 	</html>
